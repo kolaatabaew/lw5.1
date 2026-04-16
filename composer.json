@@ -1,0 +1,17 @@
+{
+    "name": "my/pizza-app",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/kolaatabaew/lw5.git"
+        }
+    ],
+    "require": {
+        "kolaatabaew/pizza-library": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
