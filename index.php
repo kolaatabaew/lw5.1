@@ -1,12 +1,18 @@
 <?php
-require 'vendor/autoload.php';
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 use App\MoscowPizzaStore;
 
-$store = new MoscowPizzaStore();
+try {
+    $store = new MoscowPizzaStore();
 
-echo "Заказ №1:\n";
-$store->orderPizza('cheese');
+    echo "--- Заказ №1 ---\n";
+    $store->orderPizza('cheese');
 
-echo "\nЗаказ №2:\n";
-$store->orderPizza('pepperoni');
+    echo "\n--- Заказ №2 ---\n";
+    $store->orderPizza('meat');
+
+} catch (\Exception $e) {
+    echo "Ошибка: " . $e->getMessage();
+}
